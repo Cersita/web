@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTOINTERDISCIPLINARIODEFISICA</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+</head>
+<header>
+    <h1> MEDIO AMBIENTE </h1>
+</header>
+<style>
+    header {
+        background-color: rgb(0, 0, 0);
+        height: 100px;
+        border-radius: 10px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    body {
+        margin: 0;
+        overflow: visible;
+        padding: 15px 15px;
+    }
+
+    main {
+        display: flex;
+        flex: 1;
+        padding: 15px 15px;
+        gap: 15px;
+    }
+
+    nav,
+    section,
+    aside {
+        background-color: #f4a460;
+        border-radius: 5px;
+        padding: 5px;
+        color: rgb(0, 0, 0);
+    }
+
+    nav {
+        width: 40%;
+    }
+
+    section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 50px;
+        color: rgb(120, 252, 195);
+        position: absolute;
+        left: 400px;
+    }
+
+    h2 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    #introduccion {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: rgb(48, 21, 21);
+    }
+
+    h3 {
+        color: rgb(0, 0, 0);
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    canvas {
+        width: 750px;
+        height: 700px;
+        margin: 20px auto;
+    }
+
+    #carbon-calculator {
+        background-color: rgb(240, 240, 240);
+        padding: 15px;
+        border-radius: 8px;
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+    }
+
+    #carbon-calculator label,
+    #carbon-calculator select,
+    #carbon-calculator input {
+        margin: 10px 0;
+        display: block;
+        width: 100%;
+    }
+
+    #carbon-calculator button {
+        padding: 10px 20px;
+        background-color: rgb(135, 134, 239);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    #carbon-calculator button:hover {
+        background-color: rgb(108, 103, 211);
+        transform: translateY(-4px);
+    }
+
+    #carbon-calculator p {
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    #container {
+        width: 80%;
+        height: 400px;
+        position: relative;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        /* Puedes cambiar este color según prefieras */
+    }
+
+    a-scene {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    #controls {
+        background-color: rgba(64, 12, 68, 0.8);
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .check-panel {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .check-panel label {
+        color: white;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    #container img {
+        display: none;
+        width: 400px;
+        height: auto;
+        margin-left: 10px;
+    }
+
+    #container img.visible {
+        display: block;
+        padding-left: 25px;
+    }
+
+    .info-container {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .visible {
+        display: block;
+    }
+</style>
+
+<body>
+    <main>
+        <nav>
+            <h3>INDICE DE CONTENIDO</h3>
+            <p><a href="#sistemasop">SISTEMAS OPERATIVOS</a></p>
+            <p><a href="#soportetecnico">SOPORTE TECNICO</a></p>
+            <p><a href="#ingle">INGLES</a></p>
+            <p><a href="#mate">MATEMATICAS</a></p>
+            <p><a href="#hitoria">HISTORIA</a></p>
+            <p><a href="#fisica">FISICA</a></p>
+        </nav>
+        <section>
+            <article id="introduccion">
+                <h2>EFECTOS DE LA CONTAMINACION</h2>
+                <p>En esta página web, se exploran los efectos negativos de la contaminación tecnológica en el medio
+                    ambiente. Se destacan los daños que los residuos electrónicos, como baterías, plásticos, y metales
+                    pesados, causan al ecosistema cuando no se gestionan adecuadamente.</p>
+                <p>El efecto de la contaminación se refiere al impacto negativo que los contaminantes tienen sobre el
+                    medio ambiente, la salud humana y los ecosistemas. Estos efectos incluyen la degradación del aire,
+                    el agua y el suelo, el cambio climático, la pérdida de biodiversidad, y problemas de salud como
+                    enfermedades respiratorias y cardiovasculares.</p>
+            </article>
+        </section>
+    </main>
+    <section>
+        <aside>
+            <h2>
+                <MARQUEE SCROLLAMOUNT="5" id="sistemasop"> SISTEMAS OPERATIVOS </MARQUEE>
+            </h2>
+            <center>
+                <h2 style="color: #154360; font-weight: bold;">ELEMENTOS O COMPONENTES DE RED QUE CONTAMINAN EL
+                    MEDIO AMBIENTE</h2>
+                <aside style="padding: 20px; color: #333; font-family: Arial, sans-serif; display: flex; gap: 20px;">
+                    <div style="flex: 1;">
+                        <p>Los elementos o componentes de una red que pueden contaminar el medio ambiente son variados
+                            y, al desecharse inadecuadamente, pueden tener efectos negativos significativos.Elementos o
+                            componentes de red que contaminan el medio ambiente son dispositivos y materiales
+                            tecnológicos utilizados en las infraestructuras de comunicación, cuya disposición inadecuada
+                            genera impactos negativos, como la liberación de sustancias tóxicas, contaminación del
+                            suelo, agua y aire, y contribución al cambio climático. </p>
+                        <img src="chatarraelectronica3.jpeg" alt="Chatarra Electrónica 1" width="500px" height="300px"
+                            style=" border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+                    </div>
+                    <div style="border-left: 2px solid #ccc; height: 635px; margin: 0 20px;"></div>
+                    <div style="flex: 1;">
+                        <p><strong>Baterías de Litio-Ion y Plomo-Ácido</strong><br>
+                            <em>Problema:</em> Estas baterías, utilizadas en equipos de red como routers y UPS (sistemas
+                            de energía ininterrumpida), contienen metales pesados como litio, plomo, y cadmio.<br>
+                            <em>Impacto:</em> Si no se reciclan adecuadamente, pueden liberar toxinas al suelo y agua,
+                            causando contaminación y afectando la vida acuática y terrestre.
+                        </p>
+                        <p><strong>Plásticos en Carcasas y Componentes</strong><br>
+                            <em>Problema:</em> Los plásticos utilizados en carcasas de routers, switches, y otros
+                            dispositivos de red pueden tardar cientos de años en degradarse.<br>
+                            <em>Impacto:</em> La descomposición lenta contribuye a la acumulación de residuos en
+                            vertederos y océanos, dañando la fauna marina e introduciendo microplásticos en la cadena
+                            alimenticia.
+                        </p>
+                        <p><strong>Circuitos Impresos (PCB)</strong><br>
+                            <em>Problema:</em> Los PCB contienen una mezcla de metales pesados como plomo y mercurio, y
+                            productos químicos como retardantes de llama bromados.<br>
+                            <em>Impacto:</em> Al incinerarse o desecharse incorrectamente, estos componentes liberan
+                            toxinas que pueden contaminar el aire y el suelo, afectando la salud humana y el medio
+                            ambiente.
+                        </p>
+                        <p><strong>Retardantes de Llama Bromados (BFR)</strong><br>
+                            <em>Problema:</em> Usados en carcasas plásticas y PCB para reducir la inflamabilidad, estos
+                            químicos son persistentes en el medio ambiente.<br>
+                            <em>Impacto:</em> Pueden acumularse en organismos vivos, alterando el sistema endocrino y
+                            afectando el desarrollo neurológico en humanos y animales.
+                        </p>
+                        <br>
+                        <img src="baterias.jpg" alt="Baterías de Litio-Ion y Plomo-Ácido"
+                            style="max-width: 200px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+                        <img src="circuito.jpg" alt="Circuitos Impresos"
+                            style="max-width: 200px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+                        <img src="retardantes.jpg" alt="Retardantes de Llama Bromados"
+                            style="max-width: 200px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+                    </div>
+                    </div>
+                </aside>
+            </center>
+    </section>
+    <br>
+    <section>
+        <aside>
+            <h2>
+                <MARQUEE SCROLLAMOUNT="5" id="soportetecnico"> SOPORTE TECNICO </MARQUEE>
+            </h2>
+            <center>
+                <h2 style="color: #154360; font-weight: bold;">CHATARRA ELECTRÓNICA</h2>
+                <aside style="padding: 20px; color: #333; font-family: Arial, sans-serif; display: flex; gap: 20px;">
+                    <div style="flex: 1;">
+                        <p>La chatarra tecnológica, también conocida como residuos electrónicos o e-waste, se refiere a
+                            los
+                            dispositivos electrónicos desechados. Estos incluyen teléfonos móviles, computadoras,
+                            televisores,
+                            electrodomésticos, y otros aparatos electrónicos que ya no se usan o están rotos.
+                        </p>
+                        <img src="soporte.jpg" alt="chatarraelectronica"
+                            style="max-width: 200px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+                    </div>
+                    <div style="border-left: 2px solid #ccc; height: 500px; margin: 0 20px;"></div>
+
+                    <div style="flex: 1;">
+                        <p>Algunos aspectos clave:</p>
+                        <p>1. <strong>Crecimiento Exponencial</strong><br> La cantidad de chatarra tecnológica está
+                            creciendo rápidamente debido a la rápida obsolescencia.</p>
+                        <p>2. <strong>Composición</strong><br> Los residuos electrónicos contienen materiales
+                            valiosos
+                            como oro, plata, cobre, platino y paladio.</p>
+                        <p>3. <strong>Impacto Ambiental</strong><br> Si no se gestionan adecuadamente, los residuos
+                            electrónicos pueden liberar toxinas en el suelo, el agua y el aire.</p>
+                        <p>4. <strong>Reciclaje y Reutilización</strong><br> El reciclaje adecuado permite recuperar
+                            materiales valiosos y reducir la necesidad de extraer nuevos recursos.</p>
+                        <p>5. <strong>Regulaciones</strong><br> Muchos países tienen leyes y regulaciones
+                            específicas
+                            para la gestión de residuos electrónicos. Directivas como la Directiva de Residuos de
+                            Aparatos Eléctricos y Electrónicos (RAEE) en la Unión Europea establecen normas para la
+                            recolección, reciclaje y reutilización de e-waste.</p>
+                        <p>6. <strong>Concienciación y Responsabilidad</strong><br> La concienciación pública sobre
+                            los
+                            riesgos y el reciclaje de residuos electrónicos es crucial para mejorar su gestión.</p>
+                    </div>
+                </aside>
+            </center>
+    </section>
+    <br>
+    <section>
+        <aside>
+            <h2>
+                <MARQUEE SCROLLAMOUNT="5" id="ingle"> INGLES </MARQUEE>
+            </h2>
+            <aside
+                style="display: flex; align-items: center; justify-content: space-between;; padding: 20px; border-radius: 10px; color: #333; font-family: Arial, sans-serif;">
+                <div style="flex: 1;margin-right: -30; text-align: justify; padding-right: 20px;">
+                    <h2 style="color: #2c3e50; font-weight: bold;">PARRAFO - AIR POLLUTION</h2>
+                    <p style="color: #2c3e50; line-height: 1.6;">
+                        Air pollution refers to the presence of harmful substances in the atmosphere, including gases,
+                        particles,
+                        and biological matter. It is caused by human activities such as industrial emissions, vehicle
+                        exhaust,
+                        and deforestation, as well as natural events like volcanic eruptions and wildfires.
+                    </p>
+                    <p style="color: #2c3e50; line-height: 1.6;">
+                        The consequences of air pollution are significant, impacting human health with respiratory and
+                        heart
+                        diseases and harming the environment through effects like acid rain and global warming.
+                        Solutions to
+                        reduce air pollution include lowering emissions, adopting renewable energy sources, and
+                        enforcing
+                        stricter environmental regulations to protect both people and the planet.
+                    </p>
+                </div>
+                <div>
+                    <img src="ingle.jpg" alt="Air Pollution"
+                        style="max-height: 300px; max-width: 300px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+                </div>
+            </aside>
+    </section>
+    <br>
+    <section>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <aside>
+            <h2>
+                <MARQUEE SCROLLAMOUNT="5" id="mate"> MATEMATICAS </MARQUEE>
+            </h2>
+            <h2 style="color: #154360; font-weight: bold;">ESTADISTICAS DE LA CONTAMINACION AMBIENTAL</h2>
+            <aside style="padding: 20px; color: #333; font-family: Arial, sans-serif; display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <p><strong>2020</strong></p>
+                    <em>Porcentaje estimado:</em> solo hubo un 7% en las emisiones de CO₂ a nivel mundial debido a la
+                    pandemia de
+                    COVID-19 a la disminución de actividades industriales y tráfico vehicular como el transporte aéreo,
+                    marítimo, terrestre.
+                    <p><strong>2021</strong></p>
+                    <em>Porcentaje estimado:</em> Incremento global del 4,8% en emisiones de CO₂ con respecto al 2020 lo
+                    que
+                    significaría un 11,8% esto sucedió porque las actividades industriales y el trasporte volvieron a
+                    funcionar también el uso de combustibles fósiles , se reanudaron actividades agrícolas lo que llevo
+                    a tu tala excesiva de árboles.
+                    <p><strong>2022</strong></p>
+                    <em>Porcentaje estimado:</em> Emisiones globales crecieron un 1,5% respecto al año anterior lo que
+                    seria un
+                    13,3% esto fue producto de Sequias, inundaciones y huracanes que se intensificaron, vinculados al
+                    aumento de gases de efecto invernadero.
+                    De igual forma surgió la deforestación en la Amazonía ecuatoriana alcanzó su punto crítico con más
+                    de 95,000 hectáreas perdidas.
+                    <p><strong>2023</strong></p>
+                    <em>Porcentaje estimado:</em> En el2023, las emisiones se incrementaron en un 3,5% con respecto al
+                    año
+                    anterior lo que dejaría al ecuador con una contaminación de 16,8% la razón de esto fue el incremento
+                    de emisiones vehiculares y minería las partículas PM2,5 por combustión de vehículos y quemas
+                    ilegales y el derrame de desechos industriales.
+                    <p><strong>2024</strong></p>
+                    <em>Porcentaje estimado:</em> En el 2024 la contaminación aumento un 7,2% lo que daría un total de
+                    24% de
+                    contaminación esto sucedió por la quema excesiva de combustibles fósiles, la tala para actividades
+                    agrícolas y expansión de minería ilegal y por los incendios que sean producido.
+                    </P>
+                </div>
+                <div style="border-left: 2px solid #ccc; height: 500px; margin: 0 20px;"></div>
+
+                <div style="flex: 1;">
+                    <h2 style="color: #154360; font-weight: bold;">GRAFICO DE BARRAS: Emisiones de CO₂</h2>
+                    <canvas id="co2Chart"></canvas>
+                </div>
+
+
+            </aside>
+        </aside>
+    </section>
+    <br>
+    <section>
+        <aside>
+            <h2>
+                <MARQUEE SCROLLAMOUNT="5" id="hitoria"> HISTORIA </MARQUEE>
+            </h2>
+            <h2> CALCULADORA - HUELLA DE CARBONO </h2>
+            <div id="carbon-calculator">
+                <img src="focoo.gif" alt="gif">
+                <label for="device">Selecciona el dispositivo:</label>
+                <select id="device">
+                    <option value="telefono">Teléfono</option>
+                    <option value="foco">Foco</option>
+                    <option value="lavadora">Lavadora</option>
+                </select>
+                <br><br>
+                <label for="hours">Horas de uso por día:</label>
+                <input type="number" id="hours" min="1" placeholder="Ingresa horas  (Kg CO2/h)" />
+                <br><br>
+                <button onclick="calculateCarbon()">Calcular</button>
+                <p id="result"></p>
+            </div>
+            </div>
+        </aside>
+    </section>
+    <br>
+    <section>
+        <aside>
+            <h2>
+                <MARQUEE SCROLLAMOUNT="5" id="fisica"> FISICA </MARQUEE>
+            </h2>
+            <h2>EFECTOS AL PLANETA</h2>
+            <div id="controls">
+                <div class="check-panel">
+                    <label>
+                        <input type="checkbox" id="co2-checkbox" onclick="toggleImage('co2')" /> CO2
+                    </label>
+                    <label>
+                        <input type="checkbox" id="metano-checkbox" onclick="toggleImage('metano')" /> Metano
+                    </label>
+                    <label>
+                        <input type="checkbox" id="plomo-checkbox" onclick="toggleImage('plomo')" /> Plomo
+                    </label>
+                    <label>
+                        <input type="checkbox" id="oxigeno-checkbox" onclick="toggleImage('oxigeno')" /> Oxígeno
+                    </label>
+                </div>
+            </div>
+
+            <section>
+                <div id="container">
+                    <a-scene embedded id="scene">
+                        <a-assets>
+                            <a-asset-item id="planetModel" src="planeta.glb"></a-asset-item>
+                            <img id="backgroundImage" src="estrellitas.jpg">
+                        </a-assets>
+                        <a-sky src="#backgroundImage"></a-sky>
+                        <a-entity id="planet" gltf-model="#planetModel" position="0 1.5 -3" scale="3 3 3"
+                            animation-mixer rotation="0 0 0" drag-rotate-component></a-entity>
+                        <a-camera position="0 1.6 0">
+                            <a-cursor></a-cursor>
+                        </a-camera>
+                    </a-scene>
+                </div>
+
+                <!-- Contenido de texto e imágenes -->
+                <div class="info-container">
+                    <div class="image-container">
+                        <img id="co2-image" src="co2.jpg" class="hidden">
+                        <h2 style="color: #2c3e50; font-weight: bold;">CO2 (Dióxido de Carbono)</h2>
+                        <p style="color: #2c3e50; line-height: 1.6;"> El CO₂ es uno de los principales gases de efecto
+                            invernadero. Contribuye al calentamiento global atrapando el calor en la atmósfera. Esto
+                            puede provocar: </p>
+                        <ul style="color: #2c3e50; line-height: 1.6;">
+                            <li><strong>Aumento de la temperatura global:</strong> contribuyendo al deshielo de los
+                                polos y al aumento del nivel del mar.</li>
+                            <li><strong>Acidificación de los océanos:</strong> que afecta negativamente a la vida
+                                marina, especialmente a los corales.</li>
+                            <li><strong>Fenómenos meteorológicos extremos:</strong> como huracanes, sequías e
+                                inundaciones.</li>
+                        </ul>
+                    </div>
+                    <div class="image-container">
+                        <img id="metano-image" src="metano.jpg" class="hidden">
+                        <h2 style="color: #2c3e50; font-weight: bold;">Metano</h2>
+                        <p style="color: #2c3e50; line-height: 1.6;"> El metano (CH₄) es otro potente gas de efecto
+                            invernadero, aunque se libera en menores cantidades que el CO₂, es mucho más potente.</p>
+                        <ul style="color: #2c3e50; line-height: 1.6;">
+                            <li><strong>Efecto invernadero:</strong> retiene más calor en la atmósfera que el CO₂,
+                                acelerando el calentamiento global.</li>
+                            <li><strong>Contaminación del aire:</strong> contribuye a la formación de ozono
+                                troposférico, un contaminante que daña la salud humana y los ecosistemas.</li>
+                            <li><strong>Derretimiento del permafrost:</strong> puede liberar más metano y CO₂, creando
+                                un ciclo de retroalimentación negativa.</li>
+                        </ul>
+                    </div>
+                    <div class="image-container">
+                        <img id="plomo-image" src="plomo.jpg" class="hidden">
+                        <h2 style="color: #2c3e50; font-weight: bold;">Plomo</h2>
+                        <p style="color: #2c3e50; line-height: 1.6;"> El plomo (Pb) es un metal pesado que puede causar
+                            graves problemas ambientales y de salud. </p>
+                        <ul style="color: #2c3e50; line-height: 1.6;">
+                            <li><strong>Contaminación del suelo y agua:</strong> El plomo se acumula en el medio
+                                ambiente y puede llegar a plantas y animales, afectando la cadena alimentaria.</li>
+                            <li><strong>Toxicidad:</strong> Daña la flora y fauna, incluidos los seres humanos, causando
+                                problemas neurológicos y renales.</li>
+                            <li><strong>Bioacumulación:</strong> Se acumula en los tejidos de los organismos vivos,
+                                llevando a mayores concentraciones en depredadores superiores.</li>
+                        </ul>
+                    </div>
+                    <div class="image-container">
+                        <img id="oxigeno-image" src="oxigeno.jpg" class="hidden">
+                        <h2 style="color: #2c3e50; font-weight: bold;">Oxígeno</h2>
+                        <p style="color: #2c3e50; line-height: 1.6;"> El oxígeno (O₂) es crucial para la vida, pero en
+                            exceso (reactivo) puede causar algunos problemas:</p>
+                        <ul style="color: #2c3e50; line-height: 1.6;">
+                            <li><strong>Fototoxicidad:</strong> Exceso de oxígeno reactivo puede dañar tejidos vivos,
+                                conocido como estrés oxidativo.</li>
+                            <li><strong>Interrupción de ecosistemas acuáticos:</strong> La hipoxia (bajos niveles de
+                                oxígeno) puede dañar los ecosistemas acuáticos, afectando a la vida marina.</li>
+                            <li><strong>Oxidación:</strong> Acelera la corrosión de estructuras metálicas, afectando
+                                infraestructuras.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <br>
+            <br>
+            <script>
+                function calculateCarbon() {
+                    const device = document.getElementById("device").value;
+                    const hours = parseFloat(document.getElementById("hours").value);
+                    const resultElement = document.getElementById("result");
+
+                    if (isNaN(hours) || hours <= 0 || hours >= 24) {
+                        resultElement.textContent = "Por favor, ingresa un número válido de horas.";
+                        return;
+                    }
+
+                    let carbonFactor = 0;
+
+                    switch (device) {
+                        case "telefono":
+                            carbonFactor = 0.02;
+                            break;
+                        case "foco":
+                            carbonFactor = 0.05;
+                            break;
+                        case "lavadora":
+                            carbonFactor = 0.5;
+                            break;
+                    }
+                    const carbonFootprint = (hours * carbonFactor).toFixed(2);
+                    resultElement.textContent = `La huella de carbono para el ${device} usado por ${hours} horas es de ${carbonFootprint} kg CO2e.`;
+                }
+
+                const ctx = document.getElementById('co2Chart').getContext('2d');
+                const co2Chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['2020', '2021', '2022', '2023', '2024'],
+                        datasets: [{
+                            data: [7, 11.8, 13.3, 16.8, 24],
+                            backgroundColor: [
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(153, 102, 255, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(153, 102, 255, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Años',
+                                    color: '#000',
+                                    font: {
+                                        size: 14,
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false,
+                            }
+                        }
+                    }
+                });
+
+                function toggleImage(compound) {
+                    const checkbox = document.getElementById(`${compound}-checkbox`);
+                    const image = document.getElementById(`${compound}-image`);
+
+                    if (checkbox.checked) {
+                        image.classList.remove('hidden'); // Show the corresponding image
+                        image.classList.add('visible'); // Ensure the visible class is active
+                    } else {
+                        image.classList.add('hidden'); // Hide the corresponding image
+                        image.classList.remove('visible'); // Ensure the visible class is not active
+                    }
+                }
+            </script>
+
+</body>
+
+</html>
