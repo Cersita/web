@@ -13,183 +13,167 @@
     <h2> EFECTOS Y CAUSAS </h2>
 </header>
 <style>
-    header {
-        background-color: rgb(0, 0, 0);
-        height: 100px;
-        border-radius: 10px;
-        text-align: center;
-        padding: 10px;
-    }
+    * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-        margin: 0;
-        overflow: visible;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: visible;
+        }
 
-    main {
-        display: flex;
-        flex: 1;
-        padding: 15px 15px;
-        gap: 15px;
-    }
+        header {
+            background-color: rgb(0, 0, 0);
+            color: rgb(120, 252, 195);
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
 
-    nav,
-    section,
-    aside {
-        background-color: #f4a460;
-        border-radius: 5px;
-        padding: 5px;
-        color: rgb(0, 0, 0);
-    }
+        header h1 {
+            font-size: 1.8rem;
+        }
 
-    nav {
-        width: 40%;
-    }
+        header h2 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
 
-    section {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-    }
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px;
+        }
 
-    h1 {
-        text-align: center;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 50px;
-        color: rgb(120, 252, 195);
-        position: absolute;
-        left: 400px;
-    }
+        nav,
+        section,
+        aside {
+            background-color: #f4a460;
+            border-radius: 5px;
+            padding: 15px;
+            color: #000;
+        }
 
-    h2 {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
+        nav {
+            width: 100%;
+        }
 
-    #introduccion {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 15px;
-        color: rgb(48, 21, 21);
-    }
+        nav p {
+            margin: 10px 0;
+        }
 
-    h3 {
-        color: rgb(0, 0, 0);
-    }
+        section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-    p {
-        text-align: justify;
-    }
+        section article {
+            font-size: 1rem;
+        }
 
-    canvas {
-        width: 750px;
-        height: 700px;
-        margin: 20px auto;
-    }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
 
-    #carbon-calculator {
-        background-color: rgb(240, 240, 240);
-        padding: 15px;
-        border-radius: 8px;
-        max-width: 400px;
-        margin: auto;
-        text-align: center;
-    }
+        p {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
 
-    #carbon-calculator label,
-    #carbon-calculator select,
-    #carbon-calculator input {
-        margin: 10px 0;
-        display: block;
-        width: 100%;
-    }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
 
-    #carbon-calculator button {
-        padding: 10px 20px;
-        background-color: rgb(135, 134, 239);
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.3s;
-    }
+        #carbon-calculator {
+            background-color: rgb(240, 240, 240);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
 
-    #carbon-calculator button:hover {
-        background-color: rgb(108, 103, 211);
-        transform: translateY(-4px);
-    }
+        #carbon-calculator label,
+        #carbon-calculator select,
+        #carbon-calculator input {
+            margin: 10px 0;
+            display: block;
+            width: 100%;
+        }
 
-    #carbon-calculator p {
-        font-weight: bold;
-        margin-top: 15px;
-    }
+        #carbon-calculator button {
+            padding: 10px;
+            background-color: rgb(135, 134, 239);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
 
-    #container {
-        width: 80%;
-        height: 400px;
-        position: relative;
-        margin: 0 auto;
-        border: 1px solid #ccc;
-        background-color: #fff;
-        /* Puedes cambiar este color según prefieras */
-    }
+        #carbon-calculator button:hover {
+            background-color: rgb(108, 103, 211);
+            transform: translateY(-4px);
+        }
 
-    a-scene {
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        position: absolute;
-    }
+        #container {
+            width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
 
-    #controls {
-        background-color: rgba(64, 12, 68, 0.8);
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        a-scene {
+            width: 100%;
+            height: 300px;
+        }
 
-    .check-panel {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-    }
+        #controls {
+            background-color: rgba(64, 12, 68, 0.8);
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-    .check-panel label {
-        color: white;
-        font-weight: bold;
-        margin: 10px 0;
-    }
+        .check-panel {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
 
-    #container img {
-        display: none;
-        width: 400px;
-        height: auto;
-        margin-left: 10px;
-    }
+        .check-panel label {
+            color: white;
+            font-weight: bold;
+            margin: 5px 0;
+        }
 
-    #container img.visible {
-        display: block;
-        padding-left: 25px;
-    }
+        @media (min-width: 768px) {
+            main {
+                flex-direction: row;
+            }
 
-    .info-container {
-        display: inline-block;
-        width: 100%;
-    }
+            nav {
+                width: 25%;
+            }
 
-    .hidden {
-        display: none;
-    }
+            section {
+                width: 75%;
+            }
 
-    .visible {
-        display: block;
-    }
+            a-scene {
+                height: 500px;
+            }
+        }
 </style>
 
 <body>
